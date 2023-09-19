@@ -1,3 +1,4 @@
+import fatec.poo.model.FuncionarioComissionado;
 import fatec.poo.model.FuncionarioHorista;
 import java.text.DecimalFormat;
 import fatec.poo.model.FuncionarioMensalista;
@@ -37,6 +38,40 @@ public class Aplic {
         System.out.println("Salario Liquido => " + df.format(funcMen.calcSalLiquido()));
         
         System.out.println("cargo " + funcMen.getCargo());
+        
+        
+        
+        
+        
+        
+        FuncionarioComissionado funccom = new FuncionarioComissionado(1010,
+                                                            "Pedro com comissao",
+                                                            "15/06/1979",
+                                                            5);
+        funccom.setCargo("Programador");
+        funccom.setSalBase(1200);
+        funccom.addVendas(8000);
+        funccom.addVendas(1500);
+        funccom.addVendas(500);
+        
+        System.out.println("\nSalario Bruto => " + df.format(funccom.calcSalBruto()));
+        
+        System.out.println("Desconto => " + df.format(funccom.calcDesconto()));
+        
+        System.out.println("Salario Liquido => " + df.format(funccom.calcSalLiquido()));
+        
+        System.out.println("cargo => " + funccom.getCargo());
+        
+        System.out.println("Gratificacao => " + funccom.calcGratificacao());
+        
+        System.out.println("total de vendas => " + funccom.totalVendas);
+        
+        System.out.println("taxa de comossão => " + funccom.taxaComissao);
+        
+        
+        
+        
+        
         
     }
     
